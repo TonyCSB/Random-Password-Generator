@@ -50,7 +50,8 @@ def main():
     for _ in range(args.number):
         password = ''.join(choice(characters) for _ in range(args.length))
         print(password)
-        copy(password)
+
+    copy(password)
 
     args.verbose and print("The last password has been copied to the clipboard.")
 
