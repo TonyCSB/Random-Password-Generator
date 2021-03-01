@@ -3,6 +3,7 @@
 from argparse import ArgumentParser
 from secrets import choice
 from pyperclip import copy
+from argcomplete import autocomplete
 import string
 
 parser = ArgumentParser(description="A secure random password generator!")
@@ -65,6 +66,7 @@ def addArgument():
     parser.add_argument("-n", "--number", type=int, help="Numbers of password to be generated", default=1)
     parser.add_argument("-c", "--custom", type=str, help="Provides customized characters as a string")
     parser.add_argument("-v", "--verbose", action='store_true', help="Run the program in verbose mode")
+    autocomplete(parser)
 
 
 if __name__ == "__main__":
